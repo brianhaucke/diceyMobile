@@ -29,19 +29,29 @@ class ViewController: UIViewController {
     // When dice are tapped, don't roll them again
 
     @IBAction func button1Pressed(_ sender: UIButton) {
-        isButton1Pressed = true
+        if diceRolls > 0 {
+            isButton1Pressed = true
+        }
     }
     @IBAction func button2Pressed(_ sender: UIButton) {
-        isButton2Pressed = true
+        if diceRolls > 0 {
+            isButton2Pressed = true
+        }
     }
     @IBAction func button3Pressed(_ sender: UIButton) {
-        isButton3Pressed = true
+        if diceRolls > 0 {
+            isButton3Pressed = true
+        }
     }
     @IBAction func button4Pressed(_ sender: UIButton) {
-        isButton4Pressed = true
+        if diceRolls > 0 {
+            isButton4Pressed = true
+        }
     }
     @IBAction func button5Pressed(_ sender: UIButton) {
-        isButton5Pressed = true
+        if diceRolls > 0 {
+            isButton5Pressed = true
+        }
     }
     // When the 'Roll' button gets tapped
     @IBAction func rollButtonPressed(_ sender: UIButton) {
