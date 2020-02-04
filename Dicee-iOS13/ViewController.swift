@@ -10,6 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    override func viewDidLoad() {
+        check1.isHidden = true
+        check2.isHidden = true
+        check3.isHidden = true
+        check4.isHidden = true
+        check5.isHidden = true
+    }
+    @IBOutlet weak var check1: UIImageView!
+    @IBOutlet weak var check2: UIImageView!
+    @IBOutlet weak var check3: UIImageView!
+    @IBOutlet weak var check4: UIImageView!
+    @IBOutlet weak var check5: UIImageView!
+    
     // ctrl->drag and drop dice images here
     // IBOutlet allows me to reference a UI element
     @IBOutlet weak var diceImageView1: UIImageView!
@@ -31,26 +44,32 @@ class ViewController: UIViewController {
     @IBAction func button1Pressed(_ sender: UIButton) {
         if diceRolls > 0 {
             isButton1Pressed = true
+            
+            check1.isHidden = false
         }
     }
     @IBAction func button2Pressed(_ sender: UIButton) {
         if diceRolls > 0 {
             isButton2Pressed = true
+            check2.isHidden = false
         }
     }
     @IBAction func button3Pressed(_ sender: UIButton) {
         if diceRolls > 0 {
             isButton3Pressed = true
+            check3.isHidden = false
         }
     }
     @IBAction func button4Pressed(_ sender: UIButton) {
         if diceRolls > 0 {
             isButton4Pressed = true
+            check4.isHidden = false
         }
     }
     @IBAction func button5Pressed(_ sender: UIButton) {
         if diceRolls > 0 {
             isButton5Pressed = true
+            check5.isHidden = false
         }
     }
     // When the 'Roll' button gets tapped
@@ -102,6 +121,11 @@ class ViewController: UIViewController {
         isButton3Pressed = false
         isButton4Pressed = false
         isButton5Pressed = false
+        check1.isHidden = true
+        check2.isHidden = true
+        check3.isHidden = true
+        check4.isHidden = true
+        check5.isHidden = true
     }
     
     
